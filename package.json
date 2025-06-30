@@ -1,0 +1,33 @@
+{
+  "name": "shimmer-irc",
+  "version": "0.1.0",
+  "description": "a module providing api for shimmer-neon irc.",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "type": "module",
+  "scripts": {
+    "build": "rollup -c",
+    "watch": "rollup -cw",
+    "test": "node ./test/index.mjs"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/TunaFish2K/shimmer-irc.git"
+  },
+  "keywords": [
+    "Typescript",
+    "Minecraft"
+  ],
+  "author": "TunaFish2K",
+  "license": "MIT",
+  "devDependencies": {
+    "@rollup/plugin-commonjs": "^28.0.6",
+    "@rollup/plugin-json": "^6.1.0",
+    "@rollup/plugin-terser": "^0.4.4",
+    "@rollup/plugin-typescript": "^12.1.4",
+    "@types/node": "^24.0.7",
+    "rollup": "^4.44.1",
+    "tslib": "^2.8.1",
+    "typecript": "^0.0.1-security"
+  }
+}
