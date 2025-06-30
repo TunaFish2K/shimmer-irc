@@ -143,7 +143,7 @@ export default class ShimmerIRC extends EventTarget {
                 data = data.slice(newLine + 1);
                 await receiveLine(line);
             } catch (e) {
-                console.log(e);
+                console.error(e);
                 this.#alive = false;
                 this.dispatchEvent(
                     new CustomEvent<unknown>("error", { detail: e }),
@@ -157,7 +157,7 @@ export default class ShimmerIRC extends EventTarget {
                 const toSend = this.messages.shift();
                 toSend && (await writeLine(toSend));
             } catch (e) {
-                console.log(e);
+                console.error(e);
                 this.#alive = false;
                 this.dispatchEvent(
                     new CustomEvent<unknown>("error", { detail: e }),
@@ -199,13 +199,11 @@ export function createNodeStreams(stream: Stream.Duplex) {
                     controller.enqueue(chunk);
                 });
                 stream.on("close", () => {
-                    console.log("close");
                     try {
                         controller.close();
                     } catch (ignored) {}
                 });
                 stream.on("end", () => {
-                    console.log("end");
                     try {
                         controller.close();
                     } catch (ignored) {}
