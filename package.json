@@ -1,5 +1,5 @@
 {
-  "name": "shimmer-irc",
+  "name": "shimmer-neon-irc",
   "version": "0.1.0",
   "description": "a module providing api for shimmer-neon irc.",
   "main": "./dist/index.js",
